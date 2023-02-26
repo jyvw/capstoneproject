@@ -5,20 +5,12 @@ import Homepage from './Components/Hompage';
 import Menupage from './Components/Menupage';
 import Aboutpage from './Components/Aboutpage';
 import Bookingpage from './Components/Bookingpage';
+import initializeTimes from './Functions/initializeTimes';
+import updateTimes from './Functions/updateTimes';
 
 function App() {
 
-  const initializeTimes = {availableTimes:["18:00"]};
-  const updateTimes = (state, action) => {
-    switch (action.type) {
-        case 'add slot':{
-            return {availableTimes: [...state.availableTimes, "19:00"]};
-        }
-      default:
-        return state;
-    }
-  }
-  const [state, dispatch] = useReducer(updateTimes, initializeTimes)
+  const [state, dispatch] = useReducer(updateTimes, initializeTimes())
 
   return (
 

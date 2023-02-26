@@ -26,6 +26,7 @@ const Bookingform = (props) => {
 
     return (
         <main>
+            <h1>Book Now!</h1>
             <form style={{display: "grid", maxWidth: "200px", gap: "20px"}} onSubmit={handleSubmit}>
                 <div>
                     <label htmlFor="res-date">Choose date</label>
