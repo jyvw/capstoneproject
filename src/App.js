@@ -1,20 +1,19 @@
 import './App.css';
-import Navbar from './Components/Navbar';
-import Herosection from './Components/Herosection';
-import Highlights from './Components/Highlights';
-import Testimonials from './Components/Testimonials';
-import About from './Components/About';
-import Footernav from './Components/Footernav';
+import {Routes, Route} from 'react-router-dom';
+import Homepage from './Components/Hompage';
+import Menupage from './Components/Menupage';
+import Aboutpage from './Components/Aboutpage';
+import Bookingpage from './Components/Bookingpage';
 
 function App() {
   return (
     <>
-    <Navbar/>
-    <Herosection/>
-    <Highlights/>
-    <Testimonials/>
-    <About/>
-    <Footernav/>
+    <Routes>
+      <Route path="/" element={<Homepage/>}/>
+      <Route path="/about" element={<Aboutpage/>}/>
+      <Route path="/menu" element={<Menupage/>}/>
+      <Route path="/bookingpage" element={<Bookingpage/>}/>
+    </Routes>
     </>
   );
 }

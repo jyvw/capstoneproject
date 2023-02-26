@@ -3,7 +3,7 @@ import about2 from "../Img/Mario and Adrian A.jpg";
 
 const About = () => {
     return (
-        <main className="aboutsection">
+        <main className="aboutsection" id="about-section">
             <div>
                 <h1>Little Lemon</h1>
                 <h2>Chicago</h2>

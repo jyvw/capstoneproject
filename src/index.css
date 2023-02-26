@@ -16,7 +16,7 @@ code {
 
 body {
   margin-top: 21px;
-  margin-bottom: 21px;
+  margin-bottom: 0px;
   margin-left: 20.14vw;
   margin-right: 20.14vw;
   background-color: white;
@@ -85,6 +85,9 @@ button {
   height: max-content;
   width: max-content;
 }
+button:hover {
+  cursor:pointer;
+ }
 
 nav {
   display: grid;
@@ -230,8 +233,8 @@ header img {
   align-items: center;
 }
 .deliveryscooter p {
-  padding-left: 2%;
-  padding-right: 0%;
+  padding-left: 0%;
+  padding-right: 1rem;
   font-family: 'Karla';
   font-style: normal;
   font-weight: 700;
@@ -239,8 +242,9 @@ header img {
   line-height: 15pt;
 }
 .deliveryscooter img {
-  width: 2em;
-  height: 2em;
+  padding-left: 7%;
+  width: 2rem;
+  height: 2rem;
 }
 
 main h2 {

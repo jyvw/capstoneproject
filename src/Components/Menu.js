@@ -4,13 +4,13 @@ import bruschetta from '../Img/bruschetta.jpg';
 import lemondessert from '../Img/lemon dessert.jpg';
 import deliveryscooter from '../Icons/delivery.png';
 import Menupage from './Menupage';
-
-const Highlights = () => {
+import Bookingpage from './Bookingpage';
+const Menu = () => {
     return (
-        <main id="highlights-section">
+        <main>
             <div className="specialstitle">
-                    <h1>This weeks specials!</h1>
-                    <Link to="/menu" element={<Menupage/>}><button>Online Menu</button></Link>
+                    <h1>Our Menu</h1>
+                    <Link to="/bookingpage" element={<Bookingpage/>}><button>Reserve a Table</button></Link>
             </div>
             <div className="specialscardssection">
                 <div className="specialscard">
@@ -54,4 +54,4 @@ const Highlights = () => {
     )
 };
 
-export default Highlights;
+export default Menu;
