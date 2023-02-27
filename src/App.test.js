@@ -1,17 +1,20 @@
 import { render, screen, fireEvent } from '@testing-library/react';
+import fetchAPI from './API/fetchAPI';
 import Bookingform from './Components/Bookingform';
 import initializeTimes from './Functions/initializeTimes';
 import updateTimes from './Functions/updateTimes';
 
 test('Renders the BookingForm heading', () => {
-  const availableTimes = ["00:00","00.01"];
-  render(<Bookingform availableTimes={availableTimes}/>);
+  const mockstate = {availableTimes:[""]};
+  const mockdispatch = jest.fn();
+  const mockSubmit = jest.fn();
+  render(<Bookingform state={mockstate} map={mockdispatch} dispatch={mockdispatch} submitForm={mockSubmit}/>);
   const headingElement = screen.getByText("Book Now!");
   expect(headingElement).toBeInTheDocument();
 })
 
 test('initializeTimes renders the correct values', () => {
-  const testinitavailableTimes = ["18:00"];
+  const testinitavailableTimes = fetchAPI(new Date());
   render(<initializeTimes/>);
   const bool = (JSON.stringify(initializeTimes().availableTimes) === JSON.stringify(testinitavailableTimes))
   expect(bool).toBe(true);

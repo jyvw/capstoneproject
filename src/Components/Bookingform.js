@@ -10,10 +10,7 @@ const Bookingform = (props) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-/*        alert(JSON.stringify("Your table is booked!",
-          {date:props.state.date,time:props.state.time,guests:props.state.guests,occasion:props.state.occasion}
-          ));*/
-        clearForm();
+            clearForm();
         props.submitForm(props.state);
     };
 
