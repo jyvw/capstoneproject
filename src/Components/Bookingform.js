@@ -65,7 +65,7 @@ const Bookingform = (props) => {
                 </div>
                 <div>
                     <label htmlFor="name">Reservation name</label>
-                    <input type="text" placeholder="Kevin Murphy and family" minLength={1} maxLength={15} value={props.state.name} onChange={(e) => props.dispatch({
+                    <input type="text" placeholder="Kevin Murphy and family" minLength={2} maxLength={15} value={props.state.name} onChange={(e) => props.dispatch({
                       type: "update_input",
                       value: e.target.value,
                       key: "name",
@@ -81,7 +81,6 @@ const Bookingform = (props) => {
                 </div>
                 <div>
                     <button type="submit" disabled={!getIsFormValid()}>Make Your Reservation</button>
-                    <input type="submit" value={"blah blah"} disabled={!getIsFormValid()} />
                 </div>
             </form>
         </main>

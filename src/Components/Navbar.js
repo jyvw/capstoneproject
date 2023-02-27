@@ -7,7 +7,7 @@ import Bookingpage from './Bookingpage';
 
 const Navbar = () => {
     return (
-    <nav>
+    <nav className='navbar'>
         <>
         <Link to="/" element={<Homepage/>}><img src={logo} alt="Little Lemon logo" /></Link>
         </>

@@ -87,7 +87,9 @@ button {
 }
 button:hover {
   cursor:pointer;
- }
+  background-color: #d8b60a;
+  transition: all .26s ease;
+}
 
 nav {
   display: grid;
@@ -109,6 +111,16 @@ nav ul {
   align-items: center;
   padding: 0px 1%;
 }
+
+nav ul li:hover{
+  text-decoration: underline;
+  transition: all .3s ease;
+}
+
+.navbar {
+  margin-bottom: 2.5%;
+}
+
 a {
   text-decoration: none;
   color: black;
@@ -366,4 +378,87 @@ footer h4 {
   font-weight: 700;
   font-size: 14pt;
   line-height: 0px;
+}
+
+.bookingpage {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 1%;
+  padding-bottom: 6%;
+}
+
+.bookingpage img{
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 16px;
+  align-self: center;
+}
+
+form div {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+}
+
+label {
+  font-family: 'Karla';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14.5pt;
+  line-height: 20px;
+  align-self: center;
+}
+
+input,select {
+  padding:10px 15px;
+  border-radius: 16px;
+  justify-self: end;
+  margin: 2px 0px;
+  border: 1.5pt solid #495E57;
+  width: auto;
+  font-family: 'Karla';
+  background-color: white;
+  outline: none;
+  transition: all .3s ease;
+}
+
+input:focus {
+  border: 1.5pt solid #F4CE14;
+}
+
+input:hover,select:hover {
+  border: 1.5pt solid #F4CE14;
+}
+
+input:focus:invalid {
+  border: 1.5pt solid red;
+  border-radius: 7px; 
+}
+
+button:disabled {
+  background-color: #c5c5c5c5;
+  color: #495E57;
+}
+
+form button {
+  margin-top: 5%;
+}
+
+.confirmation {
+  display: grid;
+  grid-template-columns: 3.5fr 1fr;
+}
+.confirmation button {
+  align-items: center;
+}
+.confirmationimg img {
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 100%;
+  height: auto;
+  object-fit: fill;
+  border-radius: 16px;
+  align-self: center;
+  justify-self: center;
+  margin-bottom: 6%;
 }
