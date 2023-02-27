@@ -7,7 +7,7 @@ function Bookingpage(props) {
   return (
     <>
     <Navbar/>
-    <Bookingform state={props.state} dispatch={props.dispatch}/>
+    <Bookingform state={props.state} dispatch={props.dispatch} submitForm={props.submitForm}/>
     <Footernav/>
     </>
   );
