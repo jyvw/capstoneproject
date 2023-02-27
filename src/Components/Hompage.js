@@ -5,7 +5,6 @@ import Testimonials from './Testimonials';
 import About from './About';
 import Footernav from './Footernav';
 import ScrollToTop from '../Functions/Scrolltotop';
-import TestfetchAPI from './TestfetchAPI';
 
 function Homepage() {
   return (

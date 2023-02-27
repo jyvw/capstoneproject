@@ -2,11 +2,12 @@ import Navbar from './Navbar';
 import Bookingform from './Bookingform';
 import Footernav from './Footernav';
 
-function Bookingpage() {
+function Bookingpage(props) {
+
   return (
     <>
     <Navbar/>
-    <Bookingform/>
+    <Bookingform state={props.state} dispatch={props.dispatch}/>
     <Footernav/>
     </>
   );
