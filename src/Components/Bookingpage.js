@@ -3,7 +3,6 @@ import Bookingform from './Bookingform';
 import Footernav from './Footernav';
 import restaurant1 from "../Img/restaurant.jpg";
 
-
 function Bookingpage(props) {
 
   return (

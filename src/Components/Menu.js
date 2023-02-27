@@ -5,6 +5,7 @@ import lemondessert from '../Img/lemon dessert.jpg';
 import deliveryscooter from '../Icons/delivery.png';
 import Menupage from './Menupage';
 import Bookingpage from './Bookingpage';
+
 const Menu = () => {
     return (
         <main>

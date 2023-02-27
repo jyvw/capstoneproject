@@ -4,15 +4,15 @@ import Bookingpage from './Bookingpage';
 import Homepage from './Hompage';
 
 const Homenavbar = () => {
-    const handleClick = (anchor) => () => { 
-        const id = `${anchor}-section`; 
-        const element = document.getElementById(id); 
-        if (element) { 
-          element.scrollIntoView({ 
-            behavior: "smooth", 
-            block: "start", 
-          }); 
-        } 
+    const handleClick = (anchor) => () => {
+        const id = `${anchor}-section`;
+        const element = document.getElementById(id);
+        if (element) {
+          element.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+          });
+        }
     };
     return (
     <nav>

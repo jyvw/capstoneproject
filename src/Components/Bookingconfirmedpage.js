@@ -4,7 +4,6 @@ import Footernav from './Footernav';
 import restaurant2 from "../Img/Mario and Adrian A.jpg";
 import Homepage from './Hompage';
 
-
 function Bookingconfirmedpage() {
 
   return (

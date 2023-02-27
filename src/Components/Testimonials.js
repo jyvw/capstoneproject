@@ -3,6 +3,7 @@ import testimonial2 from "../Img/testimonial2";
 import testimonial3 from "../Img/testimonial3";
 import testimonial4 from "../Img/testimonial4";
 import star from "../Img/star";
+
 const Testimonials = () => {
     return (
         <main>

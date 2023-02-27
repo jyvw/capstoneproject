@@ -1,19 +1,3 @@
-/*
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-*/
-
 body {
   margin-top: 21px;
   margin-bottom: 0px;
@@ -27,15 +11,16 @@ h1 {
   font-style: normal;
   font-weight: 500;
   font-size: 64pt;
-  line-height: /*77px*/55px;
+  line-height: 55px;
   margin-top: -1%;
 }
+
 h2 {
   font-family: 'Markazi Text';
   font-style: normal;
   font-weight: 400;
   font-size: 40pt;
-  line-height: /*48px*/10px;
+  line-height: 10px;
 }
 
 h1 + h2 {
@@ -85,6 +70,7 @@ button {
   height: max-content;
   width: max-content;
 }
+
 button:hover {
   cursor:pointer;
   background-color: #d8b60a;
@@ -130,13 +116,14 @@ a {
   font-size: 16pt;
   line-height: 20px;
 }
+
 header {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 14vw;
   justify-content: space-between;
-  padding-top: /*87px*/3%;
-  padding-bottom: /*73px*/3%;
+  padding-top: 3%;
+  padding-bottom: 3%;
   margin-bottom: 17%;
   margin-left: -20.14vw;
   margin-right: -20.14vw;
@@ -145,20 +132,7 @@ header {
   background-color: #495E57;
   position: relative;
 }
-.headerbox {
-  
-}
 
-/*
-.headerbox:before {
-  content:"";
-  background-color:#495E57;
-  position: absolute;
-  height: 55%;
-  width: 100vw;
-  left: 0vw;
-  z-index: -1;}
-*/
 header h1 {
   color: #F4CE14;
 }
@@ -177,30 +151,23 @@ header img {
   margin-bottom: -90%;
   border-radius: 16px;
 }
-/*header img {
-  position: relative;
-  /*clip: rect(0%,0%,0%,25px);
-  border-radius: 16px;
-  object-fit: cover;
-  width: 100%;
-  height: 75%;
-  justify-self: right;
-  float: right;
-}*/
 
 .specialstitle {
   display: grid;
   grid-template-columns: 3.5fr 1fr;
 }
+
 .specialstitle button {
   align-items: center;
 }
+
 .specialscardssection {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2vw;
   padding-bottom: 10%;
 }
+
 .specialscardssection img {
   border-top-left-radius: 16px;
   border-top-right-radius: 16px;
@@ -211,6 +178,7 @@ header img {
   width: 100%;
   height: 100%;
 }
+
 .specialscard{
   border-top-left-radius: 16px;
   border-top-right-radius: 16px;
@@ -218,10 +186,12 @@ header img {
   display: grid;
   grid-template-rows: 37% 10% 40% 13%;
 }
+
 .specialscard div {
   padding-left: 5%;
   padding-right: 5%;
 }
+
 .specialscard p {
   padding-left: 7%;
   padding-right: 7%;
@@ -236,14 +206,17 @@ header img {
   display: grid;
   grid-template-columns: 3fr 1fr;
 }
+
 .price{
   color: #495E57;
   justify-self: end;
 }
+
 .deliveryscooter {
   display: inline-flex;
   align-items: center;
 }
+
 .deliveryscooter p {
   padding-left: 0%;
   padding-right: 1rem;
@@ -253,6 +226,7 @@ header img {
   font-size: 15pt;
   line-height: 15pt;
 }
+
 .deliveryscooter img {
   padding-left: 7%;
   width: 2rem;
@@ -263,6 +237,7 @@ main h2 {
   text-align: center;
   padding-bottom: 2%;
 }
+
 .testimonials {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -270,26 +245,31 @@ main h2 {
   align-items: baseline;
   padding-bottom: 10%;
 }
+
 .rating img {
   width: 15%;
   max-height: auto;
   object-fit: scale-down;
 }
+
 .client img {
   width: 65%;
   height: auto;
   object-fit:cover;
   border-radius: 16px;
 }
+
 .client h4 {
   padding-left: 2%;
   align-self: center;
 }
+
 .testimonialcard p {
   line-height: 18pt;
   text-align:start;
   margin-top: 4%;
 }
+
 .testimonialcard > div {
   display: inline-flex;
 }
@@ -300,13 +280,16 @@ main h2 {
   gap: 5%;
   padding-bottom: 10%;
 }
+
 .aboutsection h1 {
   text-align: start;
   color: #495E57;
 }
+
 .aboutsection h2 {
   text-align: start;
 }
+
 .aboutsection p {
   text-align: justify;
 }
@@ -316,16 +299,19 @@ main h2 {
   grid-template-columns: repeat(12, 1fr);
   position: relative;
 }
+
 .aboutimages_top {
   grid-column: 1 / span 8;
   grid-row: 1;
   padding-top: 20%;
   z-index: 1;
 }
+
 .aboutimages_bottom {
   grid-column: 6 / -1;
   grid-row: 1;
 }
+
 .aboutimages img {
   border-radius: 16px;
   max-width: 125%;
@@ -358,6 +344,7 @@ footer img {
   align-self: baseline;
   margin-top: 15%;
 }
+
 footer ul {
   list-style: none;
   text-align: baseline;
@@ -365,11 +352,13 @@ footer ul {
   align-items: baseline;
   padding: 0px 1%;
 }
+
 footer h3 {
   padding-top: 0%;
   line-height: 20pt;
   color: #F4CE14;
 }
+
 footer h4 {
   text-decoration: none;
   color: white;
@@ -387,7 +376,7 @@ footer h4 {
   padding-bottom: 6%;
 }
 
-.bookingpage img{
+.bookingpage img {
   width: 100%;
   height: auto;
   object-fit: contain;
@@ -448,9 +437,11 @@ form button {
   display: grid;
   grid-template-columns: 3.5fr 1fr;
 }
+
 .confirmation button {
   align-items: center;
 }
+
 .confirmationimg img {
   display: grid;
   grid-template-columns: 1fr;
