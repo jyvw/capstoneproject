@@ -1,7 +1,12 @@
+import { validateEmail } from "../Functions/validateEmail";
+
 const Bookingform = (props) => {
 
     const getIsFormValid = () => {
-        return (true)
+        return (
+            props.state.name &&
+            validateEmail(props.state.email)
+        )
     };
 
     const clearForm = () => props.dispatch({
@@ -27,7 +32,7 @@ const Bookingform = (props) => {
                     });props.dispatch({
                       type: "update_times",
                       value: e.target.value,
-                    });}}/>
+                    });}} required/>
                 </div>
                 <div>
                     <label htmlFor="res-time">Choose time</label>
@@ -35,7 +40,7 @@ const Bookingform = (props) => {
                       type: "update_input",
                       value: e.target.value,
                       key: "time",
-                    })}>
+                    })} required>
                         {props.state.availableTimes.map(available => (<option>{available}</option>))}
                     </select>
                 </div>
@@ -45,7 +50,7 @@ const Bookingform = (props) => {
                       type: "update_input",
                       value: e.target.value,
                       key: "guests",
-                    })}/>
+                    })} required/>
                 </div>
                 <div>
                     <label htmlFor="occasion">Occasion</label>
@@ -59,7 +64,24 @@ const Bookingform = (props) => {
                     </select>
                 </div>
                 <div>
-                    <input type="submit" value="Make Your reservation" disabled={!getIsFormValid()}/>
+                    <label htmlFor="name">Reservation name</label>
+                    <input type="text" placeholder="Kevin Murphy and family" minLength={1} maxLength={15} value={props.state.name} onChange={(e) => props.dispatch({
+                      type: "update_input",
+                      value: e.target.value,
+                      key: "name",
+                    })} required/>
+                </div>
+                <div>
+                    <label htmlFor="email">Email</label>
+                    <input type="email" placeholder="kevin.murphy@greeksalad.lemon" value={props.state.email} onChange={(e) => props.dispatch({
+                      type: "update_input",
+                      value: e.target.value,
+                      key: "email",
+                    })} required/>
+                </div>
+                <div>
+                    <button type="submit" disabled={!getIsFormValid()}>Make Your Reservation</button>
+                    <input type="submit" value={"blah blah"} disabled={!getIsFormValid()} />
                 </div>
             </form>
         </main>
