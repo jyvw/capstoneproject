@@ -1,26 +1,26 @@
-import { useState } from "react";
+import {useReducer} from 'react';
+import initializeTimes from '../Functions/initializeTimes';
+import updateTimes from '../Functions/updateTimes';
 
-const Bookingform = (props) => {
-    
-    const [date, setDate] = useState("");
-    const [time, setTime] = useState("");
-    const [guests, setGuests] = useState("");
-    const [occasion, setOccasion] = useState("");
+const initialState = initializeTimes();
+
+const Bookingform = () => {
+
+    const [state, dispatch] = useReducer(updateTimes,initialState)
 
     const getIsFormValid = () => {
         return (true)
     };
 
-    const clearForm = () => {
-        setDate("");
-        setTime("");
-        setGuests("");
-        setOccasion("");
-    };
+    const clearForm = () => dispatch({
+      type: "clear_form"
+    })
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        alert("Your table is booked!");
+        alert(JSON.stringify("Your table is booked!",
+          {date:state.date,time:state.time,guests:state.guests,occasion:state.occasion}
+          ));
         clearForm();
     };
 
@@ -30,21 +30,40 @@ const Bookingform = (props) => {
             <form style={{display: "grid", maxWidth: "200px", gap: "20px"}} onSubmit={handleSubmit}>
                 <div>
                     <label htmlFor="res-date">Choose date</label>
-                    <input type="date" id="res-date" value={date} onChange={(e) => {setDate(e.target.value);props.updateTimes()}}/>
+                    <input type="date" id="res-date" value={state.date} onChange={(e) => {dispatch({
+                      type: "update_input",
+                      value: e.target.value,
+                      key: "date",
+                    });dispatch({
+                      type: "update_times",
+                      value: e.target.value,
+                    });}}/>
                 </div>
                 <div>
                     <label htmlFor="res-time">Choose time</label>
-                    <select id="res-time " value={time} onChange={(e) => {setTime(e.target.value);}}>
-                        {props.availableTimes.map(availableTimes => (<option>{availableTimes}</option>))}
+                    <select id="res-time " value={state.time} onChange={(e) => dispatch({
+                      type: "update_input",
+                      value: e.target.value,
+                      key: "time",
+                    })}>
+                        {state.availableTimes.map(available => (<option>{available}</option>))}
                     </select>
                 </div>
                 <div>
                     <label htmlFor="guests">Number of guests</label>
-                    <input type="number" placeholder="1" min="1" max="10" id="guests" value={guests} onChange={(e) => {setGuests(e.target.value);}}/>
+                    <input type="number" placeholder="1" min="1" max="10" id="guests" value={state.guests} onChange={(e) => dispatch({
+                      type: "update_input",
+                      value: e.target.value,
+                      key: "guests",
+                    })}/>
                 </div>
                 <div>
                     <label htmlFor="occasion">Occasion</label>
-                    <select id="occasion" value={occasion} onChange={(e) => {setOccasion(e.target.value);}}>
+                    <select id="occasion" value={state.occasion} onChange={(e) => dispatch({
+                      type: "update_input",
+                      value: e.target.value,
+                      key: "occasion",
+                    })}>
                         <option>Birthday</option>
                         <option>Anniversary</option>
                     </select>
